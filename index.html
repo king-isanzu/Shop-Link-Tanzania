@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="sw"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b397b"><title>ShopLink Tanzania</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<div id="languageGate" class="language-gate">
+  <div class="language-card">
+    <div class="gate-logo">🛒</div>
+    <h1>SHOP<span>LINK</span></h1>
+    <p>Chagua lugha yako / Choose your language</p>
+    <button id="chooseSw" class="primary">Kiswahili</button>
+    <button id="chooseEn" class="secondary">English</button>
+    <small>Unaweza kubadilisha lugha baadaye / You can change it later</small>
+  </div>
+</div>
+<header><a class="brand" href="#"><img class="brand-logo" src="assets/shoplink-logo.png" alt="ShopLink logo"><span>SHOP<span class="green">LINK</span><small>TANZANIA</small></span></a><div><button id="lang">Kiswahili / English</button> <button id="cartBtn">🛒 <b id="count">0</b></button> <button id="checkoutBtn" class="primary" data-sw="Weka oda" data-en="Checkout">Weka oda</button></div></header>
+<main>
+<section class="hero"><div><small class="eyebrow" data-sw="NUNUA KARIBU. PEWA MLANGONI." data-en="SHOP LOCAL. GET IT DELIVERED.">NUNUA KARIBU. PEWA MLANGONI.</small><h1 data-sw="Maduka ya karibu, yote sehemu moja." data-en="Your neighbourhood, in one shop.">Maduka ya karibu, yote sehemu moja.</h1><p data-sw="Gundua maduka ya Dar es Salaam, pata tuzo na fuatilia kila mzigo." data-en="Discover local shops in Dar es Salaam, earn rewards and track every delivery.">Gundua maduka ya Dar es Salaam, pata tuzo na fuatilia kila mzigo.</p><div class="search"><input id="search" placeholder="Tafuta bidhaa, duka..." aria-label="Search"><button id="searchBtn" data-sw="Tafuta" data-en="Search">Tafuta</button></div><p class="location">📍 <span data-sw="Uwasilishaji kwa" data-en="Delivering to">Uwasilishaji kwa</span>: <b id="loc">Dar es Salaam</b> <button id="locBtn">Badili / Change</button> <button id="gpsBtn" type="button">Google Maps / GPS</button></p></div><div class="art"><div class="orbit"></div><span class="basket">🛍️</span><span class="bike">🛵</span><span class="float">★ Earn points</span></div></section>
+<section class="showcase section" aria-label="ShopLink app preview">
+ <div class="heading"><div><h2 data-sw="Angalia ShopLink kwa picha" data-en="Explore ShopLink visuals">Angalia ShopLink kwa picha</h2><p data-sw="Kurasa zinazozunguka zinaonyesha duka, oda, ufuatiliaji na tuzo." data-en="Rotating preview cards show the store, orders, tracking and rewards.">Kurasa zinazozunguka zinaonyesha duka, oda, ufuatiliaji na tuzo.</p></div></div>
+ <div class="rotating-stage"><div class="rotating-track">
+  <article class="preview-card"><img src="assets/shoplink-phone.jpg" alt="ShopLink app on a phone"><b>ShopLink Mobile</b><small>Browse nearby products</small></article>
+  <article class="preview-card"><img src="assets/shoplink-catalog.jpg" alt="ShopLink product catalog"><b>Product Catalog</b><small>Shops and product categories</small></article>
+  <article class="preview-card"><img src="assets/shoplink-order-tracking.jpg" alt="Order tracking screens"><b>Order Tracking</b><small>Pickup to customer delivery</small></article>
+  <article class="preview-card"><img src="assets/shoplink-rewards.png" alt="ShopLink reward points page"><b>Rewards Points</b><small>Earn and redeem points</small></article>
+  <article class="preview-card"><img src="assets/shoplink-promotion.jpg" alt="ShopLink Friday promotion"><b>Friday Offers</b><small>Special weekly discounts</small></article>
+  <article class="preview-card" aria-hidden="true"><img src="assets/shoplink-phone.jpg" alt=""><b>ShopLink Mobile</b><small>Browse nearby products</small></article>
+  <article class="preview-card" aria-hidden="true"><img src="assets/shoplink-catalog.jpg" alt=""><b>Product Catalog</b><small>Shops and product categories</small></article>
+  <article class="preview-card" aria-hidden="true"><img src="assets/shoplink-order-tracking.jpg" alt=""><b>Order Tracking</b><small>Pickup to customer delivery</small></article>
+  <article class="preview-card" aria-hidden="true"><img src="assets/shoplink-rewards.png" alt=""><b>Rewards Points</b><small>Earn and redeem points</small></article>
+  <article class="preview-card" aria-hidden="true"><img src="assets/shoplink-promotion.jpg" alt=""><b>Friday Offers</b><small>Special weekly discounts</small></article>
+ </div></div>
+ <p class="gallery-hint" data-sw="Picha huzunguka kiotomatiki. Telezesha pembeni kwenye simu." data-en="Images rotate automatically. Swipe sideways on mobile.">Picha huzunguka kiotomatiki. Telezesha pembeni kwenye simu.</p>
+ <a class="admin-shortcut" href="/admin">🛡️ Open Admin Orders Dashboard →</a>
+</section>
+<section class="friday"><div><b data-sw="⚡ OFA ZA IJUMAA" data-en="⚡ FRIDAY DEALS">⚡ OFA ZA IJUMAA</b><p data-sw="Punguzo maalum kwenye maduka yanayoshiriki kila Ijumaa." data-en="Special discounts from participating shops every Friday.">Punguzo maalum kwenye maduka yanayoshiriki kila Ijumaa.</p></div><strong>UP TO 25% OFF</strong></section>
+<section class="section"><div class="heading"><div><h2 data-sw="Nunua kwa kundi" data-en="Shop by category">Nunua kwa kundi</h2><p data-sw="Pata unachohitaji karibu nawe." data-en="Find what you need nearby.">Pata unachohitaji karibu nawe.</p></div></div><div id="categories" class="categories"></div></section>
+<section class="section"><div class="heading"><div><h2 data-sw="Bidhaa maarufu karibu nawe" data-en="Popular near you">Bidhaa maarufu karibu nawe</h2><p data-sw="Maduka ya karibu, bei wazi, usafirishaji rahisi." data-en="Local shops, clear prices, easy delivery.">Maduka ya karibu, bei wazi, usafirishaji rahisi.</p></div><span>● Dar es Salaam</span></div><div id="products" class="products"></div></section>
+<section class="section panel" id="checkoutPanel" hidden><div class="heading"><div><h2 data-sw="Kamilisha oda yako" data-en="Complete your order">Kamilisha oda yako</h2><p data-sw="Weka jina, simu na eneo la kupokea mzigo." data-en="Enter your name, phone and delivery location.">Weka jina, simu na eneo la kupokea mzigo.</p></div></div><div id="cartSummary" class="result">Kikapu kiko tupu / Cart is empty</div><form id="orderForm" class="order-form"><label for="customerName" data-sw="Jina lako" data-en="Your name">Jina lako</label><input id="customerName" required maxlength="100" autocomplete="name"><label for="customerPhone" data-sw="Namba ya simu" data-en="Phone number">Namba ya simu</label><input id="customerPhone" required type="tel" placeholder="07XXXXXXXX" autocomplete="tel"><label for="locationMethod" data-sw="Chagua aina ya location (mbili)" data-en="Choose a location method (two options)">Chagua aina ya location (mbili)</label>
+<select id="locationMethod" required>
+<option value="manual" data-sw="1. Andika eneo mwenyewe" data-en="1. Type the address manually">1. Andika eneo mwenyewe</option>
+<option value="gps" data-sw="2. Google Maps / GPS" data-en="2. Google Maps / GPS">2. Google Maps / GPS</option>
+</select>
+<label for="deliveryArea" data-sw="Anwani ya delivery: mkoa, wilaya, kata/mtaa" data-en="Delivery address: region, district, ward/street">Anwani ya delivery: mkoa, wilaya, kata/mtaa</label>
+<textarea id="deliveryArea" required rows="3" placeholder="Mf. Sinza, Kinondoni, Dar es Salaam"></textarea>
+<div class="location-actions">
+<button type="button" class="secondary" id="getGpsBtn" data-sw="Pata GPS yangu" data-en="Get my GPS">Pata GPS yangu</button>
+<a id="mapLink" href="https://maps.google.com" target="_blank" rel="noreferrer" class="map-link">Fungua Google Maps / Open Google Maps</a>
+</div>
+<p id="locationHelp" class="muted">Chagua kuandika anwani au kutumia GPS. GPS inahitaji ruhusa ya browser.</p><label for="paymentMethod" data-sw="Njia ya malipo" data-en="Payment method">Njia ya malipo / Payment method</label><select id="paymentMethod" required><option value="cash_on_delivery">Cash on delivery / Lipa ukipokea</option><option value="mpesa">M-Pesa</option><option value="tigopesa">Tigo Pesa</option><option value="airtel_money">Airtel Money</option><option value="halopesa">HaloPesa</option><option value="yas">Yas</option><option value="selcom">Selcom</option><option value="nmb">NMB Bank</option><option value="crdb">CRDB Bank</option><option value="stanbic">Stanbic Bank</option><option value="visa">Visa card</option></select><label for="paymentReference" data-sw="Namba ya kumbukumbu ya malipo (hiari)" data-en="Payment reference (optional)">Namba ya kumbukumbu ya malipo (hiari)</label><input id="paymentReference" maxlength="100" placeholder="Usiweke PIN au CVV / Never enter PIN or CVV"><p class="muted" data-sw="Demo hii inahifadhi njia uliyochagua na kuonyesha kwa Admin; haikati pesa wala kuthibitisha malipo moja kwa moja. Malipo halisi yanahitaji kuunganishwa na mtoa huduma rasmi." data-en="This demo records your selected method for Admin; it does not charge or automatically verify payments. Live payments require an official payment-provider integration.">Demo hii inahifadhi njia uliyochagua na kuonyesha kwa Admin; haikati pesa wala kuthibitisha malipo moja kwa moja.</p><input id="gpsLat" type="hidden"><input id="gpsLng" type="hidden"><p class="muted" data-sw="GPS ni hiari. Ruhusu location kwenye browser ikiwa unataka kutumia GPS." data-en="GPS is optional. Allow browser location if you want to use GPS.">GPS ni hiari. Ruhusu location kwenye browser ikiwa unataka kutumia GPS.</p><button class="primary" type="submit" data-sw="Tuma oda" data-en="Place order">Tuma oda</button><button type="button" class="secondary" id="closeCheckout" data-sw="Funga" data-en="Close">Funga</button></form><div id="orderResult" class="result" aria-live="polite"></div></section>
+<section class="two">
+<article class="panel rewards"><small class="eyebrow" data-sw="TUZO ZAKO" data-en="YOUR REWARDS">TUZO ZAKO</small><h2><span id="points">450</span> <small data-sw="pointi" data-en="points">pointi</small></h2><b class="green" id="value">≈ TZS 4,500 punguzo</b><div class="progress"><span></span></div><p>100 points = TZS 1,000 discount</p><button class="primary" id="redeem" data-sw="KOMBOA SASA" data-en="REDEEM NOW">KOMBOA SASA</button><hr><p>🛍️ <b>+10 pts / TZS 1,000</b> — <span data-sw="Nunua bidhaa" data-en="Purchase products">Nunua bidhaa</span></p><p>👥 <b>+200 pts</b> — <span data-sw="Leta rafiki" data-en="Invite a friend">Leta rafiki</span></p><p>☆ <b>+50 pts</b> — <span data-sw="Andika review" data-en="Write a review">Andika review</span></p></article>
+<article class="panel"><small class="eyebrow" data-sw="USAFIRISHAJI" data-en="DELIVERY">USAFIRISHAJI</small><h2 data-sw="Fuatilia oda yako" data-en="Track your order">Fuatilia oda yako</h2><label for="code" data-sw="Namba ya oda" data-en="Order number">Namba ya oda</label><div class="search"><input id="code" value="SL-78923"><button id="track" data-sw="Fuatilia" data-en="Track">Fuatilia</button></div><div id="trackResult" class="result" aria-live="polite">Weka namba ya oda uliyopokea baada ya kuagiza / Enter the order code you received after checkout.</div><small class="muted" data-sw="Hali ya oda huonyeshwa hapa. GPS live ya rider bado inahitaji huduma ya ramani na ruhusa za rider." data-en="Order status appears here. Live rider GPS still requires a maps provider and rider permissions.">Hali ya oda huonyeshwa hapa. GPS live ya rider bado inahitaji huduma ya ramani na ruhusa za rider.</small></article>
+</section>
+<section class="section"><h2 data-sw="Akaunti kulingana na kazi" data-en="Accounts by role">Akaunti kulingana na kazi</h2><p data-sw="Chagua nafasi kuona mfano wa dashibodi." data-en="Select a role to preview its workspace.">Chagua nafasi kuona mfano wa dashibodi.</p><div class="roles"><button data-role="Customer">🧑‍💼<b data-sw="Mteja" data-en="Customer">Mteja</b><small>Orders · Points · Reviews</small></button><button data-role="Shop">🏪<b data-sw="Akaunti ya duka" data-en="Shop account">Akaunti ya duka</b><small>Products · Stock · Orders</small></button><button data-role="Delivery">🛵<b data-sw="Dereva wa delivery" data-en="Delivery rider">Dereva wa delivery</b><small>Pickup · Drop-off · Status</small></button><button data-role="Admin">🛡️<b data-sw="Admin" data-en="Admin">Admin</b><small>Users · Orders · Reports</small></button></div><div id="roleResult" class="result">Chagua akaunti ya mfano. Hii si login salama.</div></section>
+<section class="contact"><div><h2 data-sw="Unahitaji msaada?" data-en="Need help?">Unahitaji msaada?</h2><p data-sw="Wasiliana nasi ndani ya app au nje." data-en="Contact support in-app or externally.">Wasiliana nasi ndani ya app au nje.</p></div><a href="https://wa.me/255611129510" target="_blank" rel="noreferrer">WhatsApp: 0611129510</a><a href="mailto:support@shoplink.example">Email</a></section>
+<section class="support-section section" id="supportSection">
+<div class="panel">
+<small class="eyebrow">SHOPLINK SUPPORT</small>
+<h2 data-sw="Wasiliana nasi kwa njia tatu" data-en="Contact us in three ways">Wasiliana nasi kwa njia tatu</h2>
+<div class="support-options">
+<a class="support-option" href="https://wa.me/255611129510" target="_blank" rel="noreferrer"><b>1. WhatsApp</b><span>0611129510</span><small data-sw="Fungua WhatsApp ya kawaida" data-en="Open regular WhatsApp">Fungua WhatsApp ya kawaida</small></a>
+<button class="support-option" type="button" id="openChat"><b>2. Chat ndani ya app</b><span data-sw="Tuma ujumbe kwa Admin" data-en="Send a message to Admin">Tuma ujumbe kwa Admin</span><small data-sw="Ujumbe huhifadhiwa kwenye mfumo" data-en="Messages are stored in the system">Ujumbe huhifadhiwa kwenye mfumo</small></button>
+<button class="support-option" type="button" id="voiceMode"><b>3. Sauti / Voice</b><span data-sw="Ongea kwa sauti au sikiliza majibu" data-en="Speak or listen to replies">Ongea kwa sauti au sikiliza majibu</span><small data-sw="Inategemea uwezo wa browser" data-en="Depends on browser support">Inategemea uwezo wa browser</small></button>
+</div>
+<div id="chatPanel" class="chat-panel" hidden>
+<div class="chat-heading"><b data-sw="ShopLink chat" data-en="ShopLink chat">ShopLink chat</b><button id="refreshCustomerChat" type="button" class="secondary">Refresh / Sasisha</button><button id="closeChat" type="button" class="secondary">Funga / Close</button></div>
+<label for="chatName" data-sw="Jina lako (hiari)" data-en="Your name (optional)">Jina lako (hiari)</label><input id="chatName" maxlength="100" placeholder="Jina / Name">
+<label for="chatPhone" data-sw="Simu (hiari)" data-en="Phone (optional)">Simu (hiari)</label><input id="chatPhone" type="tel" maxlength="30" placeholder="0611129510">
+<div id="chatMessages" class="chat-messages" aria-live="polite"><p>Karibu ShopLink Support / Welcome to ShopLink Support.</p></div>
+<form id="chatForm" class="chat-compose"><input id="chatInput" maxlength="2000" required placeholder="Andika ujumbe / Type a message"><button class="primary" type="submit">Tuma / Send</button><button class="secondary" id="voiceInput" type="button">🎙️</button></form>
+<p id="voiceNotice" class="muted">Voice typing uses your browser speech recognition if supported.</p>
+</div>
+</div>
+</section>
+<section class="support-section section" id="supportSection">
+<div class="panel">
+<small class="eyebrow">SHOPLINK SUPPORT</small>
+<h2 data-sw="Wasiliana nasi kwa njia tatu" data-en="Contact us in three ways">Wasiliana nasi kwa njia tatu</h2>
+<div class="support-options">
+<a class="support-option" href="https://wa.me/255611129510" target="_blank" rel="noreferrer"><b>1. WhatsApp</b><span>0611129510</span><small data-sw="Fungua WhatsApp ya kawaida" data-en="Open regular WhatsApp">Fungua WhatsApp ya kawaida</small></a>
+<button class="support-option" type="button" id="openChat"><b>2. Chat ndani ya app</b><span data-sw="Tuma ujumbe kwa Admin" data-en="Send a message to Admin">Tuma ujumbe kwa Admin</span><small data-sw="Ujumbe huhifadhiwa kwenye mfumo" data-en="Messages are stored in the system">Ujumbe huhifadhiwa kwenye mfumo</small></button>
+<button class="support-option" type="button" id="voiceMode"><b>3. Sauti / Voice</b><span data-sw="Ongea kwa sauti au sikiliza majibu" data-en="Speak or listen to replies">Ongea kwa sauti au sikiliza majibu</span><small data-sw="Inategemea uwezo wa browser" data-en="Depends on browser support">Inategemea uwezo wa browser</small></button>
+</div>
+<div id="chatPanel" class="chat-panel" hidden>
+<div class="chat-heading"><b data-sw="ShopLink chat" data-en="ShopLink chat">ShopLink chat</b><button id="closeChat" type="button" class="secondary">Funga / Close</button></div>
+<label for="chatName" data-sw="Jina lako (hiari)" data-en="Your name (optional)">Jina lako (hiari)</label><input id="chatName" maxlength="100" placeholder="Jina / Name">
+<label for="chatPhone" data-sw="Simu (hiari)" data-en="Phone (optional)">Simu (hiari)</label><input id="chatPhone" type="tel" maxlength="30" placeholder="0611129510">
+<div id="chatMessages" class="chat-messages" aria-live="polite"><p>Karibu ShopLink Support / Welcome to ShopLink Support.</p></div>
+<form id="chatForm" class="chat-compose"><input id="chatInput" maxlength="2000" required placeholder="Andika ujumbe / Type a message"><button class="primary" type="submit">Tuma / Send</button><button class="secondary" id="voiceInput" type="button">🎙️</button></form>
+<p id="voiceNotice" class="muted">Voice typing uses your browser speech recognition if supported.</p>
+</div>
+</div>
+</section>
+</main><footer><b>SHOP<span class="green">LINK</span> TANZANIA</b><p>Nunua. Leta. Furaha. · Dar es Salaam · © 2026</p></footer>
+<nav class="mobile"><a href="#">⌂<small data-sw="Nyumbani" data-en="Home">Nyumbani</small></a><a href="#categories">▦<small data-sw="Kategoria" data-en="Categories">Kategoria</small></a><a href="#products">🛒<small data-sw="Kikapu" data-en="Cart">Kikapu</small></a><a href="#points">☆<small data-sw="Tuzo" data-en="Rewards">Tuzo</small></a></nav><div id="toast" class="toast"></div><script src="app.js"></script></body></html>
